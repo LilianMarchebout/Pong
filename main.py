@@ -17,11 +17,9 @@ while c.continuer:
             c.continuer = False
         if event.type == p.KEYDOWN:
             if event.key == p.K_UP:
-                if raquette.y > 0:
-                    raquette.up(c.vitesse_raquette)
+                raquette.up(c.vitesse_raquette)
             if event.key == p.K_DOWN:
-                if raquette.y < c.dimension_ecran[1]-raquette.dy:
-                    raquette.down(c.vitesse_raquette)
+                raquette.down(c.vitesse_raquette)
     p.display.flip()
     
 p.quit()
