@@ -1,4 +1,4 @@
-import pygame
+import pygame as p
 import constantes as c
 class Raquette:
     def __init__(self, coords, longueurs):
@@ -6,7 +6,7 @@ class Raquette:
         self.dx, self.dy = longueurs[0], longueurs[1]
     def show(self, ecran):
         """Affiche la raquette à l'écran"""
-        pygame.draw.rect(ecran, c.couleur_blanc, (self.x,self.y,self.dx,self.dy))
+        p.draw.rect(ecran, c.couleur_blanc, (self.x,self.y,self.dx,self.dy))
     def up(self, vitesse):
         """Change ses coordonnées lorsque la raquette va vers le haut"""
         self.y -= vitesse
