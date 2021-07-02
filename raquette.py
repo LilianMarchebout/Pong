@@ -14,3 +14,4 @@ class Raquette:
         """Change ses coordonnées lorsque la raquette va vers le bas"""
         self.y += vitesse
         self.dy += vitesse
+print("hello!")
