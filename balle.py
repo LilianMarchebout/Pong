@@ -19,11 +19,12 @@ class Balle:
     def show(self, ecran):
         p.draw.rect(ecran, c.couleur_blanc, (self.x, self.y, self.dx, self.dy))
     def deplacement(self):
-        if self.y>(c.dimension_ecran[1]-10): #si la balle cogne contre mur bas
+        if self.y > (c.dimension_ecran[1]-self.dy): #si la balle cogne contre mur bas
             self.deplY=-c.vitesse_balle[1] #déplacement sur l'axe Y
-        if self.y<0: #contre mur haut
+        if self.y < 0:
             self.deplY= c.vitesse_balle[1] 
-        if self.x>(c.dimension_ecran[0]-10):
+        if self.x > (c.dimension_ecran[0]-self.dx):
             self.deplX=-c.vitesse_balle[0] 
-        self.x+=self.dx
-        self.y+=self.dy
+        self.x += self.deplX
+        self.y += self.deplY
+            
