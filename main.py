@@ -17,7 +17,7 @@ while c.continuer:
     p.draw.rect(ecran, c.couleur_noire, (0,0,c.dimension_ecran[0],c.dimension_ecran[1])) #Fond
     for event in p.event.get():
         if event.type == p.QUIT:
-            c.continuer = False
+            c.continuer = False   
         #Action de la raquette
         if event.type == p.KEYDOWN:
             if event.key == p.K_UP: #Haut
@@ -26,10 +26,12 @@ while c.continuer:
                 raquette.down(c.vitesse_raquette)
     #Action de la balle
     balle.deplacement()
+    if balle.x < 0:
+        c.continuer = False
     #Actualise
     raquette.show(ecran)
     balle.show(ecran)
     p.display.flip()
     time.sleep(0.01)
-    
+
 p.quit()
