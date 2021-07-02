@@ -10,8 +10,6 @@ class Raquette:
     def up(self, vitesse):
         """Change ses coordonnées lorsque la raquette va vers le haut"""
         self.y -= vitesse
-        self.dy -= vitesse
     def down(self, vitesse):
         """Change ses coordonnées lorsque la raquette va vers le bas"""
         self.y += vitesse
-        self.dy += vitesse
