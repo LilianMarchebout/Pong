@@ -8,4 +8,4 @@ taille_balle = 10
 couleur_blanc = 255,255,255
 couleur_noire = 0,0,0
 coordonnees_raquette_initiales = 10, int((dimension_ecran[1]-longueur_raquette)/2) #moitié de l'écran
-coordonnes_balle_initiales = int(dimension_ecran[0]/2),int(dimension_ecran[i]/2)
+coordonnes_balle_initiales = int(dimension_ecran[0]/2),int(dimension_ecran[1]/2)
