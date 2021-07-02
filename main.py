@@ -33,7 +33,7 @@ while c.continuer:
     if balle.x < 0:
         c.continuer = False
     if balle_raquette(balle,raquette): 
-        balle.deplX= c.vitesse_balle[0] #Marche pas
+        balle.deplX= c.vitesse_balle[0]
     #Actualise
     raquette.show(ecran)
     balle.show(ecran)
