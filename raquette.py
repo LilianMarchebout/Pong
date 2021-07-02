@@ -11,3 +11,4 @@ class Raquette:
     def down(self, vitesse):
         self.y += vitesse
         self.dy += vitesse
+print("hello!")
