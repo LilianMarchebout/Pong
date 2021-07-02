@@ -30,12 +30,10 @@ while c.continuer:
                 raquette.down(c.vitesse_raquette)
     #Action de la balle
     balle.deplacement()
-    if balle.x < -10:
+    if balle.x < 0:
         c.continuer = False
     if balle_raquette(balle,raquette): 
-        print("True")
-        balle.deplX=-c.vitesse_balle[0] #Marche pas
-    print(balle.deplX)
+        balle.deplX= c.vitesse_balle[0] #Marche pas
     #Actualise
     raquette.show(ecran)
     balle.show(ecran)
