@@ -1,7 +1,7 @@
 continuer = True
 dimension_ecran = 640,480
 vitesse_raquette = 10
-vitesse_balle = 4,3
+vitesse_balle = 2,1
 longueur_raquette = 60
 largueur_raquette = 5
 taille_balle = 10
