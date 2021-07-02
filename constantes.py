@@ -4,5 +4,7 @@ vitesse_raquette = 10
 vitesse_balle = 20
 longueur_raquette = 60
 largueur_raquette = 5
+taille_balle = 10
 couleur_blanc = 255,255,255
 couleur_noire = 0,0,0
+coordonnees_raquette_initiales = 10, int(dimension_ecran[1]/2) #moitié de l'écran
