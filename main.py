@@ -14,6 +14,7 @@ while c.continuer:
     raquette.show(ecran)
     for event in pygame.event.get():
         if event.type == QUIT:
-            continuer = False
+            c.continuer = False
     pygame.display.flip()
+    
 pygame.quit()
