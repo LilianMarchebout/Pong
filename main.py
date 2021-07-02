@@ -7,7 +7,7 @@ import balle as b
 p.init()
 
 ecran = p.display.set_mode(c.dimension_ecran)
-raquette = r.Raquette((10,380),(c.largueur_raquette,c.longueur_raquette))
+raquette = r.Raquette(c.coordonnees_raquette_initiales,(c.largueur_raquette,c.longueur_raquette))
 
 while c.continuer: 
     p.draw.rect(ecran, c.couleur_noire, (0,0,c.dimension_ecran[0],c.dimension_ecran[1])) #Fond
