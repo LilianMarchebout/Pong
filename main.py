@@ -8,11 +8,15 @@ import time
 p.init()
 
 ecran = p.display.set_mode(c.dimension_ecran)
+
+#Creation des objets 
 raquette = r.Raquette(c.coordonnees_raquette_initiales,(c.largueur_raquette,c.longueur_raquette))
 balle = b.Balle(c.coordonnes_balle_initiales, (c.taille_balle,c.taille_balle))
+
 while c.continuer: 
     p.draw.rect(ecran, c.couleur_noire, (0,0,c.dimension_ecran[0],c.dimension_ecran[1])) #Fond
     raquette.show(ecran)
+    balle.show(ecran)
     for event in p.event.get():
         if event.type == p.QUIT:
             c.continuer = False
