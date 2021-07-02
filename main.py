@@ -2,6 +2,8 @@ import pygame
 from pygame.locals import *
 import raquette
 import constantes
+import game
+import balle
 
 pygame.init()
 
