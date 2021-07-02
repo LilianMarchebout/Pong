@@ -15,3 +15,6 @@ class Raquette:
         """Change ses coordonnées lorsque la raquette va vers le bas"""
         if self.y < c.dimension_ecran[1]-self.dy:
             self.y += vitesse
+    def coords_milieu_raquette(self):
+        """Renvoie les coordonnées du milieu de la raquette sous forme de tuple"""
+        return self.x + int(self.dx/2),self.y + int(self.dy/2)
