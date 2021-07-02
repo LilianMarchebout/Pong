@@ -17,9 +17,10 @@ while c.continuer:
         if event.type == QUIT:
             c.continuer = False
         if event.type == KEYDOWN:
-            if event == K_UP:
+            if event.key == K_UP:
                 raquette.up(c.vitesse_raquette)
-                print(raquette.y)
+            if event.key == K_DOWN:
+                raquette.down(c.vitesse_raquette)
     pygame.display.flip()
     
 pygame.quit()
