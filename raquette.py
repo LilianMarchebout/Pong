@@ -9,7 +9,9 @@ class Raquette:
         p.draw.rect(ecran, c.couleur_blanc, (self.x,self.y,self.dx,self.dy))
     def up(self, vitesse):
         """Change ses coordonnées lorsque la raquette va vers le haut"""
-        self.y -= vitesse
+        if self.y > 0:
+            self.y -= vitesse
     def down(self, vitesse):
         """Change ses coordonnées lorsque la raquette va vers le bas"""
-        self.y += vitesse
+        if self.y < c.dimension_ecran[1]-self.dy:
+            self.y += vitesse
