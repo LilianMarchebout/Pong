@@ -19,7 +19,8 @@ class Ball:
 
 x=randint(0,600)
 y=randint(0,400)
-dx=choice([1, -1])
+#dx=choice([3, -3])
+dx=4
 dy=3
 
 continuer=1
@@ -31,7 +32,9 @@ while continuer:
     if y>390:
         dy=-3
     if y<0:
-        dy=3        
+        dy=3
+    if x>590:
+        dx=-4    
     x+=dx   
     y+=dy    
     balle=pygame.draw.rect(ecran, blanc,(x,y,10,10))    
