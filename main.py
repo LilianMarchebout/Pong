@@ -7,8 +7,8 @@ import time
 
 def balle_raquette(balle, raquette):
     """Retourne si la balle touche la raquette"""
-    return (raquette.x < balle.x < raquette.x+raquette.dx) and (raquette.y < balle.y < raquette.y+raquette.dy)
-
+    #return (raquette.x < balle.x < raquette.x+raquette.dx) and (raquette.y < balle.y < raquette.y+raquette.dy)
+    return raquette.x == balle.x and raquette.y < balle.y < raquette.y+raquette.dy
 p.init()
 
 ecran = p.display.set_mode(c.dimension_ecran)
@@ -30,11 +30,12 @@ while c.continuer:
                 raquette.down(c.vitesse_raquette)
     #Action de la balle
     balle.deplacement()
-    if balle.x < 0:
+    if balle.x < -10:
         c.continuer = False
     if balle_raquette(balle,raquette): 
         print("True")
         balle.deplX=-c.vitesse_balle[0] #Marche pas
+    print(balle.deplX)
     #Actualise
     raquette.show(ecran)
     balle.show(ecran)
