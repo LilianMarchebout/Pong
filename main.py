@@ -32,12 +32,13 @@ while c.continuer:
     balle.deplacement()
     if balle.x < 0:
         c.continuer = False
-    if balle_raquette(balle,raquette): 
+    if balle_raquette(balle,raquette):
         balle.deplX= c.vitesse_balle[0]
+        c.t /= 1.1 #ajoute de la vitesse à la balle
     #Actualise
     raquette.show(ecran)
     balle.show(ecran)
     p.display.flip()
-    time.sleep(0.01)
+    time.sleep(c.t)
 
 p.quit()
