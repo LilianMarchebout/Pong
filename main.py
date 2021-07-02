@@ -20,9 +20,9 @@ while c.continuer:
             c.continuer = False
         #Action de la raquette
         if event.type == p.KEYDOWN:
-            if event.key == p.K_UP:
+            if event.key == p.K_UP: #Haut
                 raquette.up(c.vitesse_raquette)
-            if event.key == p.K_DOWN:
+            if event.key == p.K_DOWN: #Bas
                 raquette.down(c.vitesse_raquette)
     #Action de la balle
     balle.deplacement()
