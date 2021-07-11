@@ -1,14 +1,11 @@
 import pygame as p
 import raquette as r
 import constantes as c
-import game as g
 import balle as b
 import time
+import fonctions as f
 
-def balle_raquette(balle, raquette):
-    """Retourne si la balle touche la raquette"""
-    #return (raquette.x < balle.x < raquette.x+raquette.dx) and (raquette.y < balle.y < raquette.y+raquette.dy)
-    return raquette.x == balle.x and raquette.y < balle.y < raquette.y+raquette.dy
+
 p.init()
 
 ecran = p.display.set_mode(c.dimension_ecran)
@@ -32,13 +29,16 @@ while c.continuer:
     balle.deplacement()
     if balle.x < 0:
         c.continuer = False
-    if balle_raquette(balle,raquette):
-        balle.deplX= c.vitesse_balle[0]
-        c.t /= 1.1 #ajoute de la vitesse à la balle
+    if f.balle_raquette(balle,raquette):
+        balle.deplX, balle.deplY = f.frappe(balle,raquette)
+        print(balle.deplX, balle.deplY)
+        
+        #c.t /= 1.1 #ajoute de la vitesse à la balle
     #Actualise
     raquette.show(ecran)
     balle.show(ecran)
     p.display.flip()
-    time.sleep(c.t)
+    time.sleep(0.01)
+    c.t += 1
 
 p.quit()
