@@ -15,4 +15,3 @@ def frappe(balle, raquette):
 def angle(balle,raquette):
     """"Retourne l'angle"""
     return (90/raquette.dy)*balle.coords_milieu_balle()[1]+(45-(90/raquette.dy)*(raquette.y+raquette.dy))
-
