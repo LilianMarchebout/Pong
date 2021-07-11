@@ -29,9 +29,11 @@ while c.continuer:
     balle.deplacement()
     if balle.x < 0:
         c.continuer = False
-    if f.balle_raquette(balle,raquette):
+    if f.balle_raquette(balle,raquette): #s'il y a impact 
         balle.deplX, balle.deplY = f.frappe(balle,raquette)
-        print(balle.deplX, balle.deplY)
+        #print(f.angle(balle,raquette))
+        #print(raquette.x, balle.x, raquette.x+raquette.dx)
+        #print(raquette.y, balle.y, raquette.y+raquette.dy)
         
         #c.t /= 1.1 #ajoute de la vitesse à la balle
     #Actualise
