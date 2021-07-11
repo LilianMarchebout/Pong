@@ -6,6 +6,7 @@ dans le while
 """
 import pygame as p
 import constantes as c
+import random
 
 class Balle:
     def __init__(self, coords, longueurs):
@@ -20,11 +21,14 @@ class Balle:
         p.draw.rect(ecran, c.couleur_blanc, (self.x, self.y, self.dx, self.dy))
     def deplacement(self):
         if self.y > (c.dimension_ecran[1]-self.dy): #si la balle cogne contre mur bas
-            self.deplY=-c.vitesse_balle[1] #déplacement sur l'axe Y
+            self.deplY = -abs(self.deplY) #déplacement sur l'axe Y
         if self.y < 0:
-            self.deplY= c.vitesse_balle[1] 
+            self.deplY= abs(self.deplY)
         if self.x > (c.dimension_ecran[0]-self.dx):
-            self.deplX=-c.vitesse_balle[0] 
+            self.deplX= -abs(self.deplX)
         self.x += self.deplX
         self.y += self.deplY
+    def coords_milieu_balle(self):
+        """Renvoie les coordonnées du milieu de la balle sous forme de tuple"""
+        return self.x + int(self.dx/2),self.y + int(self.dy/2)
             
