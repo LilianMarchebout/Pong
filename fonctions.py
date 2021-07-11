@@ -10,7 +10,7 @@ def frappe(balle, raquette):
     angle = math.sin(impact_ref_raquette_y/30*math.pi/2)
     return -balle.deplX, balle.deplY*angle*math.sqrt(5)
 
-def angle(balle,raquette,coords_impact):
-    return (90/raquette.dy)*coords_impact[1]+(45-(90/raquette.dy)*(raquette.y+raquette.dy))
+def angle(balle,raquette):
+    return (90/raquette.dy)*balle.coords_milieu_balle[1]+(45-(90/raquette.dy)*(raquette.y+raquette.dy))
     
         
