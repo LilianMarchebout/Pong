@@ -1,4 +1,4 @@
-import pygame as p
+_import pygame as p
 import raquette as r
 import constantes as c
 import balle as b
